@@ -9,6 +9,12 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Bold</string>
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -17,12 +23,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vke-U4-5L0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Okf-Le-pw7">
+                                        <rect key="frame" x="37.5" y="200" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="O87-Zk-eZI"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want your sign to say?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmb-J8-5Mt">
+                                        <rect key="frame" x="39.5" y="123" width="296" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="296" id="2Sr-oB-8bG"/>
+                                            <constraint firstAttribute="height" constant="17" id="7jZ-O4-KJL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-8A-sXt">
+                                        <rect key="frame" x="37" y="310" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="QIQ-lG-7Mc"/>
+                                            <constraint firstAttribute="height" constant="50" id="bl6-xk-0WA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.033594113639999999" green="0.68123061630000004" blue="0.88939393590000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Lmb-J8-5Mt" firstAttribute="top" secondItem="vke-U4-5L0" secondAttribute="top" constant="123" id="Ij4-i5-inv"/>
+                                    <constraint firstItem="Okf-Le-pw7" firstAttribute="top" secondItem="Lmb-J8-5Mt" secondAttribute="bottom" constant="60" id="SqV-Le-3HD"/>
+                                    <constraint firstItem="Okf-Le-pw7" firstAttribute="centerX" secondItem="vke-U4-5L0" secondAttribute="centerX" id="U3W-KP-ySn"/>
+                                    <constraint firstItem="Zmg-8A-sXt" firstAttribute="centerX" secondItem="vke-U4-5L0" secondAttribute="centerX" id="hkM-EZ-d96"/>
+                                    <constraint firstItem="Zmg-8A-sXt" firstAttribute="top" secondItem="Okf-Le-pw7" secondAttribute="bottom" constant="80" id="ksO-S3-XuN"/>
+                                    <constraint firstItem="Lmb-J8-5Mt" firstAttribute="centerX" secondItem="vke-U4-5L0" secondAttribute="centerX" id="y85-52-Y1U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vke-U4-5L0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6BH-da-dC4"/>
+                            <constraint firstItem="vke-U4-5L0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TsC-tL-NOI"/>
+                            <constraint firstItem="vke-U4-5L0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ip2-Nb-eJL"/>
+                            <constraint firstItem="vke-U4-5L0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zfd-3Q-IGb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="userInputBox" destination="Okf-Le-pw7" id="a3x-aU-bGE"/>
+                        <outlet property="userOutputLable" destination="Zmg-8A-sXt" id="CMd-p8-8lJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>

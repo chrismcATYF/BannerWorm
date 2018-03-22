@@ -12,6 +12,7 @@
 		193746FD20635B7100A13640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193746FB20635B7100A13640 /* Main.storyboard */; };
 		193746FF20635B7100A13640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193746FE20635B7100A13640 /* Assets.xcassets */; };
 		1937470220635B7100A13640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1937470020635B7100A13640 /* LaunchScreen.storyboard */; };
+		1937470A20635EAA00A13640 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937470920635EAA00A13640 /* Sign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		193746FE20635B7100A13640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1937470120635B7100A13640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1937470320635B7100A13640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1937470920635EAA00A13640 /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		193746F620635B7100A13640 /* BannerWorm */ = {
 			isa = PBXGroup;
 			children = (
+				1937470C2063607D00A13640 /* Classes */,
+				1937470B2063607000A13640 /* Controllers */,
 				193746F720635B7100A13640 /* AppDelegate.swift */,
-				193746F920635B7100A13640 /* MainVC.swift */,
 				193746FB20635B7100A13640 /* Main.storyboard */,
 				193746FE20635B7100A13640 /* Assets.xcassets */,
 				1937470020635B7100A13640 /* LaunchScreen.storyboard */,
 				1937470320635B7100A13640 /* Info.plist */,
 			);
 			path = BannerWorm;
+			sourceTree = "<group>";
+		};
+		1937470B2063607000A13640 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				193746F920635B7100A13640 /* MainVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1937470C2063607D00A13640 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1937470920635EAA00A13640 /* Sign.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			files = (
 				193746FA20635B7100A13640 /* MainVC.swift in Sources */,
 				193746F820635B7100A13640 /* AppDelegate.swift in Sources */,
+				1937470A20635EAA00A13640 /* Sign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

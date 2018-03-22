@@ -10,7 +10,12 @@ import UIKit
 
 class MainVC: UIViewController {
 
+    @IBOutlet weak var userInputBox: UITextField!
+    @IBOutlet weak var userOutputLable: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        var userInput = userInputBox
+        userOutputLable.text = "Hello, world"
     }
 }
